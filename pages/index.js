@@ -1,65 +1,47 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import { useEffect, useState } from "react";
+import HomeFooter from "../components/HomeFooter";
+import NavBar from "../components/NavBar";
+import NavLinks from "../components/NavLinks";
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	const [deviceWidth, setDeviceWidth] = useState(0);
+	const breakpoint = 767;
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+	// useEffect(() => {
+	// 	setDeviceWidth(window.innerWidth);
+	// 	const handleWindowResize = () => setDeviceWidth(window.innerWidth);
+	// 	window.addEventListener("resize", handleWindowResize);
+	// 	return () => window.removeEventListener("resize", handleWindowResize);
+	// }, []);
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+	const mobileNavLinksComponent = (
+		<div>
+			<NavLinks navLink="Company" color="#033C49" />
+			<NavLinks navLink="About" color="#033C49" />
+			<NavLinks navLink="Support" color="#033C49" />
+			<NavLinks navLink="Download App" color="#033C49" />
+		</div>
+	);
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+	const desktopNavLinksComponent = (
+		<div>
+			<NavLinks navLink="Company" color="#033C49" />
+			<NavLinks navLink="About" color="#033C49" />
+			<NavLinks navLink="Support" color="#033C49" />
+			{/* <li><NavBarButton text='Download App' color='#F8F8F8' backgroundColor='#F9811E' /></li> */}
+		</div>
+	);
+	return (
+		<div className="bg-[#e5e5e5]">
+			<Head>
+				<title>Spare Parts - Home</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<HomeFooter/>
+			{/* <NavBar>
+				{deviceWidth <= breakpoint ? mobileNavLinksComponent : desktopNavLinksComponent}
+			</NavBar> */}
+		</div>
+	);
 }
