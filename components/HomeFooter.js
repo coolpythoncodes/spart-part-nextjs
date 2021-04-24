@@ -1,6 +1,6 @@
 const HomeFooter = () => {
 	return (
-		<footer className="w-11/12 m-auto py-20 sm:flex sm:justify-between" >
+		<footer className="py-20 sm:flex sm:justify-between" >
 			<div>
 				<h1 className="text-2xl font-bold">Logo</h1>
 				<ul className="flex space-x-5 mt-3 ">
