@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import HomeContact from "../components/HomeContact";
 import HomeFooter from "../components/HomeFooter";
 import NavBar from "../components/NavBar";
 import NavLinks from "../components/NavLinks";
@@ -38,7 +39,11 @@ export default function Home() {
 				<title>Spare Parts - Home</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<HomeFooter/>
+			<div className="w-11/12 m-auto">
+				<HomeContact />
+				<HomeFooter />
+			</div>
+
 			{/* <NavBar>
 				{deviceWidth <= breakpoint ? mobileNavLinksComponent : desktopNavLinksComponent}
 			</NavBar> */}
