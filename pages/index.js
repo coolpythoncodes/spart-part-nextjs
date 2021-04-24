@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import HomeContact from "../components/HomeContact";
 import HomeFooter from "../components/HomeFooter";
+import HomeServiceStation from "../components/HomeServiceStation";
 import NavBar from "../components/NavBar";
 import NavLinks from "../components/NavLinks";
 
@@ -40,6 +41,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<div className="w-11/12 m-auto">
+				<HomeServiceStation/>
 				<HomeContact />
 				<HomeFooter />
 			</div>
