@@ -7,8 +7,11 @@ module.exports = {
 			...theme('colors'),
 			'primary': '#033C49',
 			'secondary': '#F9811E',
-			'danger': '#e3342f',
 		   }),
+		   textColor: theme => theme('colors'),
+		   textColor: {
+			 'primary': '#033C49',
+		   },
 		extend: {},
 	},
 	variants: {
