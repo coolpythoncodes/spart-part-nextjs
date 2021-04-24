@@ -1,10 +1,12 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import HelpingHands from "../components/HelpingHands";
 import HomeContact from "../components/HomeContact";
 import HomeFooter from "../components/HomeFooter";
 import HomeServiceStation from "../components/HomeServiceStation";
 import NavBar from "../components/NavBar";
 import NavLinks from "../components/NavLinks";
+import Testimonial from "../components/Testimonial";
 
 export default function Home() {
 	const [deviceWidth, setDeviceWidth] = useState(0);
@@ -41,7 +43,9 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<div className="w-11/12 m-auto">
+				<HelpingHands/>
 				<HomeServiceStation/>
+				<Testimonial/>
 				<HomeContact />
 				<HomeFooter />
 			</div>
