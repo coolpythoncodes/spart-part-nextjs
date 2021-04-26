@@ -4,6 +4,7 @@ import HelpingHands from "../components/HelpingHands";
 import HomeContact from "../components/HomeContact";
 import HomeFooter from "../components/HomeFooter";
 import HomeServiceStation from "../components/HomeServiceStation";
+import HomeShowCase from "../components/HomeShowCase";
 import NavBar from "../components/NavBar";
 import NavLinks from "../components/NavLinks";
 import Testimonial from "../components/Testimonial";
@@ -37,15 +38,16 @@ export default function Home() {
 		</div>
 	);
 	return (
-		<div className="bg-[#e5e5e5]">
+		<div className="bg-[#e5e5e5] font-mulish">
 			<Head>
 				<title>Spare Parts - Home</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<HomeShowCase />
 			<div className="w-11/12 m-auto">
-				<HelpingHands/>
-				<HomeServiceStation/>
-				<Testimonial/>
+				<HelpingHands />
+				<HomeServiceStation />
+				<Testimonial />
 				<HomeContact />
 				<HomeFooter />
 			</div>

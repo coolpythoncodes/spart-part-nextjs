@@ -1,3 +1,5 @@
+// const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
 	mode: "jit",
 	purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -13,8 +15,15 @@ module.exports = {
 			...theme("colors"),
 			primary: "#033C49",
 		}),
+		fontFamily:{
+			'mulish': 'Mulish'
+		},
 
-		extend: {},
+		extend: {
+			// fontFamily: {
+			// 	sans: ['Mulish', ...defaultTheme.fontFamily.sans],
+			//   },
+		},
 	},
 	variants: {
 		extend: {},
