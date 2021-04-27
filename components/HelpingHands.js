@@ -1,6 +1,6 @@
 const HelpingHands = () => {
     return (
-        <div className="text-center pb-32 sm:flex sm:space-x-10 sm:pb-0 xl:w-1/2 xl:mx-auto">
+        <div className="text-center pb-32 sm:flex sm:space-x-10 sm:pb-20 xl:w-1/2 xl:mx-auto">
             <div>
                 <img className="mx-auto" src="/icon.png" alt=""/>
                 <h3 className="text-sm font-bold text-center">Helping Hands</h3>

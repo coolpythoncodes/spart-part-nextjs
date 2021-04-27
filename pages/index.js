@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import HelpingHands from "../components/HelpingHands";
 import HomeContact from "../components/HomeContact";
 import HomeFooter from "../components/HomeFooter";
+import HomeNavbar from "../components/HomeNavbar";
 import HomeServiceStation from "../components/HomeServiceStation";
 import HomeShowCase from "../components/HomeShowCase";
 import NavBar from "../components/NavBar";
@@ -43,6 +44,9 @@ export default function Home() {
 				<title>Spare Parts - Home</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			{/* <div className="w-11/12 m-auto"> */}
+				<HomeNavbar/>
+			{/* </div> */}
 			<HomeShowCase />
 			<div className="w-11/12 m-auto">
 				<HelpingHands />

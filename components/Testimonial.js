@@ -8,8 +8,8 @@ const Testimonial = () => {
 			<div className="bg-primary rounded-xl pt-8">
 				<img className="mx-auto rounded-full" src="/client.png" alt="" />
 				<div className="flex ml-[5%] pt-4 sm:ml-0 sm:ml-[10%] sm:pt-8">
-					<span className="-mt-10  text-9xl text-white">“</span>
-					<p className=" text-white font-normal w-3/4 text-sm ">
+					<span className=" -mt-10  text-9xl text-white">“</span>
+					<p className="text-white font-normal w-3/4 text-sm ">
 						Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
 						Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
 					</p>

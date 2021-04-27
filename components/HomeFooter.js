@@ -21,7 +21,7 @@ const HomeFooter = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="flex mt-5 justify-between sm:space-x-7 lg:space-x-20 xl:space-x-40 ">
+			<div className="flex mt-5 justify-between sm:mt-0 sm:space-x-7 lg:space-x-20 xl:space-x-40 ">
 				<div>
 					<h3 className="font-extrabold mb-5">Contact</h3>
 					<ul>
