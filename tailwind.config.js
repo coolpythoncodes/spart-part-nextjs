@@ -15,15 +15,15 @@ module.exports = {
 			...theme("colors"),
 			primary: "#033C49",
 		}),
-		fontFamily:{
-			'mulish': 'Mulish'
+		fontFamily: {
+			mulish: "Mulish",
 		},
 
-		extend: {
-			// fontFamily: {
-			// 	sans: ['Mulish', ...defaultTheme.fontFamily.sans],
-			//   },
+		boxShadow: {
+			insuranceBox: "0px 16px 40px 20px rgba(112, 144, 176, 0.2)",
 		},
+
+		extend: {},
 	},
 	variants: {
 		extend: {},
