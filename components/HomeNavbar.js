@@ -9,13 +9,15 @@ const HomeNavbar = () => {
 				<div className="hidden sm:flex">
 					<ul className="hidden sm:flex sm:items-center sm:w-56 sm:mr-16 lg:w-72 lg:mr-24 sm:justify-between">
 						<li>
-							<a href="/#">Company</a>
+							<a className="text-primary" href="/#">
+								Company
+							</a>
 						</li>
 						<li>
-							<a href="/#">About</a>
+							<a className="text-primary" href="/#">About</a>
 						</li>
 						<li>
-							<a href="/#">Support</a>
+							<a className="text-primary" href="/#">Support</a>
 						</li>
 					</ul>
 					<a
