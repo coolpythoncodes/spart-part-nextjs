@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 const HomeFooter = () => {
 	return (
-		<footer className="py-20 sm:flex sm:justify-between" >
+		<footer className="py-20 sm:flex sm:justify-between">
 			<div>
 				<h1 className="text-2xl font-bold">Logo</h1>
 				<ul className="flex space-x-5 mt-3 ">
@@ -41,9 +43,11 @@ const HomeFooter = () => {
 					<h3 className="font-extrabold mb-5">Company</h3>
 					<ul>
 						<li className="mb-3">
-							<a className="text-sm" href="/#">
-								Insurance
-							</a>
+							<Link href="/insurance">
+								<a className="text-sm" href="/#">
+									Insurance
+								</a>
+							</Link>
 						</li>
 						<li className="mb-3">
 							<a className="text-sm" href="/#">

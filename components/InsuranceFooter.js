@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const InsuranceFooter = () => {
 	return (
 		<footer className="bg-[#0091B2] text-white lg:pb-24">
@@ -40,9 +42,11 @@ const InsuranceFooter = () => {
 						<h3 className="text-sm font-extrabold mb-5">Company</h3>
 						<ul>
 							<li className="mb-5">
-								<a className="text-sm font-normal" href="/#">
-									Insurance
-								</a>
+								<Link href="/insurance">
+									<a className="text-sm font-normal" href="/#">
+										Insurance
+									</a>
+								</Link>
 							</li>
 							<li className="mb-5">
 								<a className="text-sm font-normal" href="/#">
@@ -71,7 +75,9 @@ const InsuranceFooter = () => {
 
 				{/* Footer Form */}
 				<div className="lg:w-80">
-					<h1 className="text-4xl font-bold leading-[62px] flex justify-end">Inquire</h1>
+					<h1 className="text-4xl font-bold leading-[62px] flex justify-end">
+						Inquire
+					</h1>
 					<form className="">
 						<input
 							className="w-full text-sm pl-12 text-white rounded-md bg-primary h-14 outline-none mb-7 focus:border-white focus:border-2"
@@ -93,7 +99,12 @@ const InsuranceFooter = () => {
 							id=""
 							placeholder="type your message here"
 						></textarea>
-						<button className="border-white border-2 w-full rounded-md h-12 uppercase mt-5" type="submit">Send message</button>
+						<button
+							className="border-white border-2 w-full rounded-md h-12 uppercase mt-5"
+							type="submit"
+						>
+							Send message
+						</button>
 					</form>
 				</div>
 			</div>
