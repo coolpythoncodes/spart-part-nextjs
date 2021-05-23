@@ -1,0 +1,37 @@
+@media only screen and (max-width: "640px"){
+    .menu-btn {
+        display: block;
+        z-index: 999;
+        transition: all 0.5s ease-out;
+    
+        &-line {
+            width: 2rem;
+            height: 0.2rem;
+            margin-bottom: 0.4rem;
+            background: #000;
+        }
+    }
+    
+    .close{
+        transform: rotate(180deg);
+        // transform-origin: 0 -10px;
+    
+        .menu-btn-line {
+            //   Line 1 - Rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+    
+            // Line 2 - Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+    
+            // Line 3 - Rotate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(8px, -8px);
+            }
+        }
+    }
+    
+}

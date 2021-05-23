@@ -11,6 +11,11 @@ import NavLinks from "../components/NavLinks";
 import Testimonial from "../components/Testimonial";
 
 export default function Home() {
+	const [menuToggle, setmenuToggle] = useState(false);
+	const onToggle = () => {
+		setmenuToggle(!menuToggle);
+	};
+
 	const [deviceWidth, setDeviceWidth] = useState(0);
 	const breakpoint = 767;
 
@@ -45,7 +50,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			{/* <div className="w-11/12 m-auto"> */}
-				<HomeNavbar/>
+			<HomeNavbar menuToggle={menuToggle} onToggle={onToggle} />
 			{/* </div> */}
 			<HomeShowCase />
 			<div className="w-11/12 m-auto">
