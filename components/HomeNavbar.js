@@ -28,15 +28,23 @@ const HomeNavbar = ({ onToggle, menuToggle }) => {
 								Support
 							</a>
 						</NavLinkItem>
+						<NavLinkItem>
+							<a className="sm:hidden text-primary" href="/#">
+								Download App
+							</a>
+						</NavLinkItem>
 					</NavLinks>
-					<a 
+					<a
 						className="hidden bg-[#F9811E] text-white w-36 sm:flex justify-center h-12 items-center rounded-3xl"
 						href="/#"
 					>
 						Download App
 					</a>
 				</div>
-				<div className={`sm:hidden menu-btn ${menuToggle ? 'close' : null}`} onClick={onToggle}>
+				<div
+					className={`sm:hidden menu-btn ${menuToggle ? "close" : null}`}
+					onClick={onToggle}
+				>
 					<div className="menu-btn-line "></div>
 					<div className="menu-btn-line "></div>
 					<div className="menu-btn-line "></div>
@@ -73,7 +81,6 @@ const NavLinkItem = styled.li`
 		padding: 20px 10px;
 		border-bottom: 1px solid #ccc;
 		font-size: 14px;
-
 		&:last-child {
 			border-bottom: none;
 		}

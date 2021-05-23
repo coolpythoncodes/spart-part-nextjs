@@ -1,9 +1,15 @@
 import Head from "next/head";
+import { useState } from "react";
+import styled from "styled-components";
 import InsuranceCards from "../components/InsuranceCards";
 import InsuranceFooter from "../components/InsuranceFooter";
 import WorkCards from "../components/WorkCards";
 
 const insurance = () => {
+	const [menuToggle, setmenuToggle] = useState(false);
+	const onToggle = () => {
+		setmenuToggle(!menuToggle);
+	};
 	return (
 		<div className="bg-[#e5e5e5] font-mulish">
 			<Head>
@@ -16,43 +22,57 @@ const insurance = () => {
 			>
 				<div className="w-11/12 sm:w-[84%] mx-auto flex justify-between items-center">
 					<div className="text-2xl font-bold">Logo</div>
-					<div className="hidden sm:flex">
-						<ul className="hidden sm:flex sm:items-center sm:w-56 sm:mr-8 lg:w-72 lg:mr-24 sm:justify-between">
-							<li>
+					<div className=" sm:flex">
+						<NavLinks
+							style={{ transform: menuToggle ? "translate(0)" : null }}
+							className=" sm:flex sm:items-center sm:w-56 sm:mr-8 lg:w-72 lg:mr-24 sm:justify-between"
+						>
+							<NavLinkItem>
 								<a className="text-primary" href="/#">
 									Packages
 								</a>
-							</li>
-							<li>
+							</NavLinkItem>
+							<NavLinkItem>
 								<a className="text-primary" href="/#">
 									About
 								</a>
-							</li>
-							<li>
+							</NavLinkItem>
+							<NavLinkItem>
 								<a className="text-primary" href="/#">
 									Contact
 								</a>
-							</li>
-						</ul>
+							</NavLinkItem>
+							<NavLinkItem>
+								<a className="sm:hidden text-primary" href="/#">
+									Register
+								</a>
+							</NavLinkItem>
+							<NavLinkItem>
+								<a className="sm:hidden text-primary" href="/#">
+									Login
+								</a>
+							</NavLinkItem>
+						</NavLinks>
 						<a
-							className="rounded-3xl text-primary border border-black py-3 px-6 sm:mr-4 lg:mr-16"
+							className="hidden rounded-3xl text-primary border border-black py-3 px-6 sm:inline sm:mr-4 lg:mr-16"
 							href="/#"
 						>
 							Register
 						</a>
 						<a
-							className="bg-[#F9811E] text-white w-36 flex justify-center h-12 items-center rounded-3xl hover:opacity-80"
+							className="hidden bg-[#F9811E] text-white w-36 sm:flex justify-center h-12 items-center rounded-3xl hover:opacity-80"
 							href="/#"
 						>
 							Login
 						</a>
 					</div>
-					<div className="sm:hidden">
-						<div className="w-8 h-[0.2rem] mb-[0.4rem] bg-black"></div>
-						<div className="w-8 h-[0.2rem] mb-[0.4rem] bg-black"></div>
-						<div className="w-8 h-[0.2rem] bg-black"></div>
-						{/* <div className="w-8 h-1 mb-2 bg-black"></div>
-                <div className="w-8 h-1 mb-2 bg-black"></div> */}
+					<div
+						className={`sm:hidden menu-btn ${menuToggle ? "close" : null}`}
+						onClick={onToggle}
+					>
+						<div className="menu-btn-line "></div>
+						<div className="menu-btn-line "></div>
+						<div className="menu-btn-line "></div>
 					</div>
 				</div>
 			</div>
@@ -69,8 +89,13 @@ const insurance = () => {
 						>
 							Get Started <img className="ml-3" src="/arrow-right.svg" alt="" />
 						</a>
-						<span className="mx-4 hidden sm:inline">or</span> 
-						<a className="hidden sm:inline text-sm py-4 px-3 rounded-md text-[#FE895D] border border-[#FE895D]" href="/#">Make Inquiry</a>
+						<span className="mx-4 hidden sm:inline">or</span>
+						<a
+							className="hidden sm:inline text-sm py-4 px-3 rounded-md text-[#FE895D] border border-[#FE895D]"
+							href="/#"
+						>
+							Make Inquiry
+						</a>
 					</div>
 				</div>
 				<div>
@@ -118,3 +143,32 @@ const insurance = () => {
 };
 
 export default insurance;
+
+const NavLinks = styled.ul`
+	@media only screen and (max-width: 640px) {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 70%;
+		background: #e5e5e5;
+		padding: 80px 30px;
+		z-index: 99999;
+		border-right: 1px solid #ccc;
+		transform: translate(-100%);
+		transition: transform 0.5s ease-in-out;
+	}
+`;
+
+const NavLinkItem = styled.li`
+	@media only screen and (max-width: 640px) {
+		padding: 20px 10px;
+		border-bottom: 1px solid #ccc;
+		font-size: 14px;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+`;
