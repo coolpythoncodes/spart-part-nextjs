@@ -1,12 +1,13 @@
 import Link from "next/link";
+import styled from "styled-components";
 
 const InsuranceFooter = () => {
 	return (
-		<footer className="bg-[#0091B2] text-white lg:pb-24">
-			<div className="w-11/12 mx-auto lg:flex lg:justify-between lg:items-center">
+		<footer className=" bg-[#0091B2] pt-12 lg:pt-24 text-white pb-10">
+			<div className="w-11/12 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
 				{/* logo */}
-				<div>
-					<div className="text-2xl font-bold mb-7">Logo</div>
+				<div className="order-3 flex items-center justify-between lg:flex-col lg:order-none">
+					<div className="text-2xl self-start font-bold lg:mb-7">Logo</div>
 					<div className="flex space-x-4">
 						<a href="/#">
 							<img src="/facebook-2.png" alt="" />
@@ -21,7 +22,7 @@ const InsuranceFooter = () => {
 				</div>
 
 				{/* footer links */}
-				<div className="flex justify-between lg:space-x-20">
+				<div className="flex justify-between order-2 my-16 lg:my-0 lg:space-x-20 lg:order-none">
 					<div>
 						<h3 className="text-sm font-extrabold mb-5">Contact</h3>
 						<ul>
@@ -74,7 +75,7 @@ const InsuranceFooter = () => {
 				</div>
 
 				{/* Footer Form */}
-				<div className="lg:w-80">
+				<FooterForm className="relative order-1 lg:w-80 lg:order-none">
 					<h1 className="text-4xl font-bold leading-[62px] flex justify-end">
 						Inquire
 					</h1>
@@ -106,10 +107,22 @@ const InsuranceFooter = () => {
 							Send message
 						</button>
 					</form>
-				</div>
+				</FooterForm>
 			</div>
 		</footer>
 	);
 };
 
 export default InsuranceFooter;
+
+const FooterForm = styled.div`
+	&:before {
+		content: "";
+		position: absolute;
+		width: 1px;
+		height: 310px;
+		background: #fff;
+		top: 120px;
+		left: -5vw;
+	}
+`;
