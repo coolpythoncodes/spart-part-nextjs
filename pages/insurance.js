@@ -15,6 +15,10 @@ const insurance = () => {
 			<Head>
 				<title>Spare Parts - Insurance</title>
 				<link rel="icon" href="/favicon.ico" />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Mulish&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
 			<div
 				className=" z-50 bg-[#e5e5e5] fixed w-full pb-3

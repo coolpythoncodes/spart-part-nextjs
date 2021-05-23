@@ -19,6 +19,10 @@ export default function Home() {
 			<Head>
 				<title>Spare Parts - Home</title>
 				<link rel="icon" href="/favicon.ico" />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Mulish&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
 			<HomeNavbar menuToggle={menuToggle} onToggle={onToggle} />
 			<HomeShowCase />
