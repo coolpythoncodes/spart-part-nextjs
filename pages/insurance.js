@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useState } from "react";
 import styled from "styled-components";
 import InsuranceCards from "../components/InsuranceCards";
@@ -52,9 +53,9 @@ const insurance = () => {
 								</a>
 							</NavLinkItem>
 							<NavLinkItem>
-								<a className="sm:hidden text-primary" href="/#">
-									Login
-								</a>
+								<Link href="/login">
+									<a className="sm:hidden text-primary">Login</a>
+								</Link>
 							</NavLinkItem>
 						</NavLinks>
 						<a
@@ -63,12 +64,14 @@ const insurance = () => {
 						>
 							Register
 						</a>
-						<a
-							className="hidden bg-[#F9811E] text-white w-36 sm:flex justify-center h-12 items-center rounded-3xl hover:opacity-80"
-							href="/#"
-						>
-							Login
-						</a>
+						<Link href="/login">
+							<a
+								className="hidden bg-[#F9811E] text-white w-36 sm:flex justify-center h-12 items-center rounded-3xl hover:opacity-80"
+								href="/#"
+							>
+								Login
+							</a>
+						</Link>
 					</div>
 					<div
 						className={`sm:hidden menu-btn ${menuToggle ? "close" : null}`}
