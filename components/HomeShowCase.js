@@ -26,7 +26,7 @@ const HomeShowCase = () => {
 						className="flex pl-4 w-36 items-center py-2 bg-black hover:opacity-80 sm:mr-8"
 					>
 						<img src="/playstore.png" alt="" />
-						<p className="text-white font-extrabold text-sm pl-2">
+						<p className="text-white font-extrabold text-xs pl-2">
 							<span className="font-thin block">Get it on</span> PlayStore
 						</p>
 					</a>
@@ -36,7 +36,7 @@ const HomeShowCase = () => {
 						className="flex pl-2 w-40 items-center py-2 bg-black hover:opacity-80"
 					>
 						<img src="/applestore.png" alt="" />
-						<p className="text-white font-extrabold text-sm pl-2">
+						<p className="text-white font-extrabold text-xs pl-2">
 							<span className="font-thin block">Download on the</span>{" "}
 							Applestore
 						</p>
