@@ -48,9 +48,9 @@ const insurance = () => {
 								</a>
 							</NavLinkItem>
 							<NavLinkItem>
-								<a className="sm:hidden text-primary" href="/#">
-									Register
-								</a>
+								<Link href="/signup">
+									<a className="sm:hidden text-primary">Register</a>
+								</Link>
 							</NavLinkItem>
 							<NavLinkItem>
 								<Link href="/login">
@@ -58,16 +58,16 @@ const insurance = () => {
 								</Link>
 							</NavLinkItem>
 						</NavLinks>
-						<a
-							className="hidden rounded-3xl text-primary border border-black py-3 px-6 sm:inline sm:mr-4 lg:mr-16"
-							href="/#"
-						>
-							Register
-						</a>
+						<Link href="/signup">
+							<a
+								className="hidden rounded-3xl text-primary border border-black py-3 px-6 sm:inline sm:mr-4 lg:mr-16"
+							>
+								Register
+							</a>
+						</Link>
 						<Link href="/login">
 							<a
 								className="hidden bg-[#F9811E] text-white w-36 sm:flex justify-center h-12 items-center rounded-3xl hover:opacity-80"
-								href="/#"
 							>
 								Login
 							</a>
